@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text color */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .loading-container {
+            text-align: center;
+        }
+
+        .loading-text {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .loading-bar-container {
+            width: 300px;
+            background-color: #333; /* Dark gray loading bar background */
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .loading-bar {
+            width: 0;
+            height: 20px;
+            background-color: #3498db; /* Blue loading bar color */
+            transition: width 8s; /* Loading animation duration (changed to 8s) */
+        }
+
+        .logo {
+            max-width: 200px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="loading-text">DDOS Protection, powered by Zaso Services</div>
+      <div class="loading-text">https://zasodev.com</div>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+        <img class="logo" src="https://th.bing.com/th/id/R.b30996977fbc8d6a29e7546cb86e62f5?rik=ysyY5PX3xy1a6Q&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fvpn-png-vpn-thread-anonymous-fri-apr-14-19-29-11-2017-no-59897570-reply-original-archived-moe-rbt-512.png&ehk=zLTggyuu%2f2Q%2bqIakgLZ7ekhTr5pk3AUVCYss5rb6bWU%3d&risl=&pid=ImgRaw&r=0" alt="Zaso Services Logo">
+    </div>
+
+    <script>
+        // Simulate loading and redirect
+        const loadingBar = document.querySelector('.loading-bar');
+        let progress = 0;
+        const loadingDuration = 8000; // 8 seconds
+
+        function updateLoadingBar() {
+            progress += (100 / (loadingDuration / 200));
+            loadingBar.style.width = `${progress}%`;
+
+            if (progress >= 100) {
+                // Redirect to home.html after loading
+                window.location.href = 'home.html';
+            }
+        }
+
+        setInterval(updateLoadingBar, 200);
+    </script>
+</body>
+</html>

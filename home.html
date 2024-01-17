@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: linear-gradient(to right, #ff0000, #000000);
+      color: #fff;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 100%;
+      height: 200px; /* Adjust the height as needed */
+      border-radius: 8px;
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, #ff0000, #000000);
+      color: #fff;
+    }
+    .panel {
+      background-color: #000;
+      border: 2px solid #ff0000;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .owner-tab {
+      text-align: center;
+    }
+    .owner-tab h2 {
+      font-size: 2em;
+      color: #fff;
+    }
+    .owner-tab p {
+      font-size: 1.2em;
+      color: #ddd;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(to right, #ff0000, #000000);
+      padding: 15px 0;
+      text-align: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.5em;
+    }
+  </style>
+  <script>
+    function scrollToSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <a href="javascript:void(0);" onclick="scrollToSection('contact')">Contact</a>
+    <a href="javascript:void(0);" onclick="scrollToSection('plans')">Plans</a>
+  </nav>
+  <header>
+    <h1>Modern Home Page</h1>
+    <img src="https://th.bing.com/th/id/OIP.D4QImAIR-YaVGPmzW-_D7wHaEK?rs=1&pid=ImgDetMain" alt="Image 1">
+    <img src="https://th.bing.com/th/id/OIP.88HkM9F3g0UNfYwXeYE2zwHaEA?rs=1&pid=ImgDetMain" alt="Image 2">
+    <img src="https://th.bing.com/th/id/R.b33335d62a19c46ede6b5e386625bdbf?rik=xvkGs1oraZb8VA&pid=ImgRaw&r=0" alt="Image 3">
+  </header>
+  <section id="contact">
+    <div class="panel">
+      <h2>Contact Panel</h2>
+      <p>This is the contact section panel content.</p>
+    </div>
+    <div class="owner-tab">
+      <h2>Owner Information</h2>
+      <p>My Name | Where I'm From</p>
+    </div>
+  </section>
+  <section id="plans">
+    <div class="panel">
+      <h2>Website ddos protection. $10.00 lifetime</h2>
+      <p>DDoS protection is a security solution that detects and defends against denial-of-service threats</p>
+    </div>
+  </section>
+  <section id="plans">
+    <div class="panel">
+      <h2>VPN proxy monthly. $10.00 </h2>
+      <p>This VPN cannot be ddos attacked or botnet.</p>
+    </div>
+</body>
+</html>
